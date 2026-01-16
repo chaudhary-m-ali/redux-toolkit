@@ -51,6 +51,19 @@ const collectionSlice = createSlice({
         transition: Zoom,
       });
     },
+    clearToast: () => {
+      toast.error("Clear all Collection!", {
+        position: "top-center",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Zoom,
+      });
+    },
   },
 });
 export const {
@@ -59,5 +72,6 @@ export const {
   clearCollection,
   addToast,
   removeToast,
+  clearToast,
 } = collectionSlice.actions;
 export default collectionSlice.reducer;
